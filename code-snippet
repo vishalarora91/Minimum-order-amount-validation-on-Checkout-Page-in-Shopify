@@ -1,0 +1,22 @@
+    {% if checkout.total_price < 20000%}
+    <style>
+      .step__footer{ position: relative; padding-top: 35px; }
+      .step__footer:before{
+        content: 'Minimum orders have to be over $200.00.';
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 16px;
+        text-align: center;
+        width: 100%;
+        color: #197bbd;
+        font-weight: 600;
+      }
+      .step__footer__continue-btn{ display: none; }
+      .anyflexbox .step__footer{
+        -webkit-flex-direction: initial;
+        -ms-flex-direction: initial;
+        flex-direction: initial;
+      }
+    </style>
+    {% endif %}
